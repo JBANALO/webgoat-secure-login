@@ -19,7 +19,7 @@ php -S localhost:8000 -t .
 
 ## WebGoat Lesson
 
-The dashboard links to the WebGoat Password Strength lesson. Update the URL in `dashboard.php` if your WebGoat host or path is different.
+The dashboard includes local lesson pages for Password Strength, SQL Injection, and Insecure Login. You can also point lessons to an external WebGoat instance by updating `dashboard.php`.
 
 ## Security Measures Implemented
 

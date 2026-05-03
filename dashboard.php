@@ -6,7 +6,7 @@ require_once __DIR__ . '/includes/auth.php';
 
 require_login();
 
-$lesson_url = 'http://localhost:8080/WebGoat/lessons/PasswordStrength';
+$lesson_url = 'password-strength.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
