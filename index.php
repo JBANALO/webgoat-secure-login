@@ -26,8 +26,10 @@ $setup_needed = !users_exist();
 
         <?php if ($setup_needed): ?>
             <div class="notice">
-                No users exist yet. Run setup first.
+                No users exist yet. You can run setup or register.
                 <a href="setup.php">Go to setup</a>
+                <span>or</span>
+                <a href="register.php">Create account</a>
             </div>
         <?php endif; ?>
 
@@ -48,6 +50,7 @@ $setup_needed = !users_exist();
         </form>
 
         <p class="hint">Passwords are hashed and never stored in plain text.</p>
+        <a class="link" href="register.php">Create an account</a>
     </main>
 </body>
 </html>
