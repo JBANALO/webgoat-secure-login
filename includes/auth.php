@@ -57,6 +57,17 @@ function find_user(string $username): ?array
     return null;
 }
 
+function find_user_by_email(string $email): ?array
+{
+    foreach (read_users() as $user) {
+        if (strcasecmp($user['email'] ?? '', $email) === 0) {
+            return $user;
+        }
+    }
+
+    return null;
+}
+
 function login_user(string $username): void
 {
     ensure_session();

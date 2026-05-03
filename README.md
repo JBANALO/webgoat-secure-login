@@ -15,6 +15,7 @@ php -S localhost:8000 -t .
 
 - Setup account: http://localhost:8000/setup.php
 - Login page: http://localhost:8000/index.php
+- Register page: http://localhost:8000/register.php
 
 ## WebGoat Lesson
 
@@ -39,3 +40,16 @@ The dashboard links to the WebGoat Password Strength lesson. Update the URL in `
 - The first user must be created in `setup.php`.
 - The user database is stored in `data/users.json`.
 - This project is intended for classroom use only.
+
+## Email verification (Registration)
+
+Registration uses a 6-digit email verification code. Configure these environment variables (e.g., Railway Variables):
+
+- `SMTP_HOST`
+- `SMTP_PORT` (default: 587)
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_FROM` (from email address)
+- `SMTP_FROM_NAME` (optional)
+- `SMTP_ENCRYPTION` (`tls` or `ssl`, default: `tls`)
+- `OTP_EXPIRY_MINUTES` (default: 5)

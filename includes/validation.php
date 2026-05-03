@@ -30,6 +30,19 @@ function validate_username(string $username): ?string
     return null;
 }
 
+function validate_email(string $email): ?string
+{
+    if ($email === '') {
+        return 'Email is required.';
+    }
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        return 'Email must be a valid email address.';
+    }
+
+    return null;
+}
+
 function validate_password(string $password): ?string
 {
     if ($password === '') {
