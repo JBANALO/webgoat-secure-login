@@ -1,0 +1,97 @@
+:root {
+    --bg: #f7f3f3;
+    --card: #ffffff;
+    --text: #1b1112;
+    --accent: #7a1f2a;
+    --error: #a4161a;
+    --notice: #6b0f1a;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+}
+
+main.card {
+    max-width: 460px;
+    margin: 64px auto;
+    background: var(--card);
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+.form {
+    display: grid;
+    gap: 16px;
+}
+
+label {
+    display: grid;
+    gap: 6px;
+    font-weight: 600;
+}
+
+input {
+    padding: 10px 12px;
+    border: 1px solid #dbc9cc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button, .button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.error {
+    background: #fdecee;
+    color: var(--error);
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.notice {
+    background: #f6eded;
+    color: var(--notice);
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.hint {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.lesson {
+    margin: 20px 0;
+    padding: 16px;
+    border: 1px solid #e1d3d5;
+    border-radius: 8px;
+}
+
+.link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent);
+}
