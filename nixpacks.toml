@@ -1,0 +1,6 @@
+[phases.setup]
+# Use a specific PHP version for Railway builds.
+nixPkgs = ["php82"]
+
+[start]
+cmd = "php -S 0.0.0.0:$PORT -t ."
