@@ -180,6 +180,15 @@ setcookie(<span class="string">'session'</span>, $token, [
     </div>
   </div>
 
+  <div class="card">
+    <h2>Sources</h2>
+    <p>Inspired by the OWASP WebGoat project and OWASP Top 10 guidance.</p>
+    <ul>
+      <li><a href="https://owasp.org/www-project-webgoat/" target="_blank" rel="noopener noreferrer">OWASP WebGoat</a></li>
+      <li><a href="https://owasp.org/Top10/" target="_blank" rel="noopener noreferrer">OWASP Top 10</a></li>
+    </ul>
+  </div>
+
   <div class="quiz-section">
     <h2>Knowledge Check</h2>
     <div class="quiz-q">

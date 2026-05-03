@@ -41,6 +41,13 @@ The dashboard includes local lesson pages for Password Strength, SQL Injection, 
 - The user database is stored in `data/users.json`.
 - This project is intended for classroom use only.
 
+## Sources
+
+Lesson summaries are original content inspired by these references:
+
+- https://owasp.org/www-project-webgoat/
+- https://owasp.org/Top10/
+
 ## Email verification (Registration)
 
 Registration uses a 6-digit email verification code. Configure these environment variables (e.g., Railway Variables):
