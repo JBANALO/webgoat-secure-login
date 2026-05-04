@@ -14,14 +14,18 @@ if (users_exist()) {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $username = normalize_username($_POST['username'] ?? '');
+        $email = trim($_POST['email'] ?? '');
         $password = $_POST['password'] ?? '';
         $confirm = $_POST['confirm'] ?? '';
 
         $username_error = validate_username($username);
+        $email_error = validate_email($email);
         $password_error = validate_password($password);
 
         if ($username_error) {
             $error = $username_error;
+        } elseif ($email_error) {
+            $error = $email_error;
         } elseif ($password_error) {
             $error = $password_error;
         } elseif ($password !== $confirm) {
@@ -33,6 +37,7 @@ if (users_exist()) {
             $users = [
                 [
                     'username' => $username,
+                    'email' => $email,
                     'password_hash' => $hash,
                     'created_at' => date('c'),
                 ],
@@ -73,6 +78,10 @@ if (users_exist()) {
                 <label>
                     Username
                     <input type="text" name="username" required>
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email" autocomplete="email" required>
                 </label>
                 <label>
                     Password

@@ -19,6 +19,9 @@ if (validate_email($email) || validate_password($password)) {
 }
 
 $user = find_user_by_email($email);
+if (!$user) {
+    $user = find_user($email);
+}
 if (!$user || !password_verify($password, $user['password_hash'] ?? '')) {
     header('Location: index.php?error=1');
     exit;
