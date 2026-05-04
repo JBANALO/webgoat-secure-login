@@ -39,8 +39,8 @@ $setup_needed = !users_exist();
 
         <form method="post" action="login.php" class="form">
             <label>
-                Username
-                <input type="text" name="username" autocomplete="username" required>
+                Email
+                <input type="email" name="email" autocomplete="email" required>
             </label>
             <label>
                 Password

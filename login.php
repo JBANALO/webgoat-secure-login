@@ -10,15 +10,15 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$username = normalize_username($_POST['username'] ?? '');
+$email = trim($_POST['email'] ?? '');
 $password = $_POST['password'] ?? '';
 
-if (validate_username($username) || validate_password($password)) {
+if (validate_email($email) || validate_password($password)) {
     header('Location: index.php?error=1');
     exit;
 }
 
-$user = find_user($username);
+$user = find_user_by_email($email);
 if (!$user || !password_verify($password, $user['password_hash'] ?? '')) {
     header('Location: index.php?error=1');
     exit;
